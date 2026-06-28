@@ -1,8 +1,9 @@
-🍽️ Bendito Buteco – Cardápio Web Responsivo
+🍽️ Bendito Buteco – Cardápio Digital
 
 Projeto desenvolvido para a disciplina de Engenharia de Software (2º semestre da graduação em Análise e Desenvolvimento de Sistemas – Fatec Taquaritinga).
 
 O objetivo foi desenvolver um cardápio digital responsivo para um restaurante, permitindo que os clientes montassem seus pedidos de forma simples tanto pelo computador quanto pelo celular.
+
 
 
 📋 Objetivo
@@ -18,10 +19,12 @@ Interface intuitiva para dispositivos móveis e desktop
 Nesta primeira versão o projeto não utiliza banco de dados, sendo focado na interface e experiência do usuário.
 
 
+
 🚀 Tecnologias utilizadas
 HTML5
 CSS3
 Bootstrap
+
 
 
 ## 👩‍💻 Minha participação
@@ -34,6 +37,7 @@ Principais contribuições:
 - Desenvolvimento das telas de personalização das marmitas pequena, média e grande, permitindo a seleção de misturas, acompanhamentos e inclusão de observações.
 - Elaboração dos Diagramas de Caso de Uso (UML), utilizados na modelagem das funcionalidades do sistema.
 - Participação na implementação da interface utilizando HTML, CSS, Bootstrap e JavaScript, seguindo o padrão visual definido pela equipe.
+
 
 
 ## 📱 Funcionalidades
@@ -52,10 +56,11 @@ Principais contribuições:
 
 O layout foi inicialmente modelado utilizando prototipação antes do desenvolvimento da interface.
 
+
 (<img width="3202" height="1865" alt="Telas Protótipo 1" src="https://github.com/user-attachments/assets/08e5f0f3-160c-4a00-bff0-86e7413416ef" />
 <img width="3218" height="2584" alt="Telas Protótipo 2" src="https://github.com/user-attachments/assets/7d343f57-031c-44d8-afe9-8d307eddd828" /> 
-<img width="2145" height="2316" alt="Telas Protótipo 3" src="https://github.com/user-attachments/assets/cf659b30-517c-4482-8ccd-085f30dc4665" />
-)
+<img width="2145" height="2316" alt="Telas Protótipo 3" src="https://github.com/user-attachments/assets/cf659b30-517c-4482-8ccd-085f30dc4665" />)
+
 
 
 ## 📚 Aprendizados
@@ -76,22 +81,26 @@ Histórico de pedidos
 Login de clientes
 
 
+
 📷 Telas do Projeto
 
 ### Seleção de marmitas
 
-(<img width="742" height="917" alt="image" src="https://github.com/user-attachments/assets/61cadf5f-470c-4f39-ba69-af82221f61d4" />
-)
+(<img width="742" height="917" alt="image" src="https://github.com/user-attachments/assets/61cadf5f-470c-4f39-ba69-af82221f61d4" />)
+
+
 
 ### Personalização do pedido
 
-(<img width="737" height="916" alt="image" src="https://github.com/user-attachments/assets/902fa99f-dea2-43cd-a139-acd81b0711c3" />
-)
+(<img width="737" height="916" alt="image" src="https://github.com/user-attachments/assets/902fa99f-dea2-43cd-a139-acd81b0711c3" />)
+
+
 
 ### Escolha das bebidas
 
-(<img width="607" height="898" alt="image" src="https://github.com/user-attachments/assets/2ca80977-11fe-4f42-9f16-a09689b53d9a" />
-)
+(<img width="607" height="898" alt="image" src="https://github.com/user-attachments/assets/2ca80977-11fe-4f42-9f16-a09689b53d9a" />)
+
+
 
 
 ## 👩‍💼 Autora
