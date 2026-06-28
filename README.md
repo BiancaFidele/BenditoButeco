@@ -1,4 +1,4 @@
-# 🍽️ Bendito Buteco – Cardápio Digital Responsivo
+# 🍲 Bendito Buteco – Cardápio Digital Responsivo
 
 > Projeto acadêmico desenvolvido para a disciplina de **Engenharia de Software** (2 semestre) do curso de **Análise e Desenvolvimento de Sistemas** da **Fatec Taquaritinga**
 
