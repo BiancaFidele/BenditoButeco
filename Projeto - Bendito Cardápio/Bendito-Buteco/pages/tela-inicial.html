@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bendito Boteco - Cardápio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        @media (max-width: 768px) and (orientation: landscape) {
+            .footer {
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+        }
+        body {
+            background: url('../assets/img/Background.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        a {
+            font-size: 80%;
+            font-family: 'Montserrat';
+            src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+            color: #fece26;
+            text-decoration: dashed;
+        }
+        .logo {
+            max-width: 140px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            font-size: 200%;
+        }
+        .center-button {
+            display: flex;
+            justify-content: center;
+            font-family: 'Montserrat';
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 5px;
+            font-family: 'Montserrat';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="img-fluid logo" src="../assets/img/Logo.png" alt="Logotipo">
+    </header>
+    <main class="content">
+        <div class="container text-center">
+            <div class="center-button mb-3">
+                <a href="tela-cadastro.html">
+                    <button class="btn btn-outline-warning">Meu Perfil</button>
+                </a>
+            </div>
+            <div class="center-button mb-3">
+                <a href="tela-marmitas.html">
+                    <button class="btn btn-outline-warning">Marmitas</button>
+                </a>
+            </div>
+            <div class="center-button mb-3">
+                <a href="tela-cardapio.html">
+                    <button class="btn btn-outline-warning">Cardápio</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center footer">
+        <p class="lead center-text fs-auto" id="cde">
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Area+Leao,+1440+Taquaritinga,+SP">Av. Dr. Francisco Área Leão, 1440</a>
+            <br>
+            <a href="tel:+5516981990013">(16) 98199-0013 - (WhatsApp)</a>
+        </p>
+    </footer>
+</body>
+</html>
+

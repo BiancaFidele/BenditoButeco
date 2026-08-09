@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Bebidas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/css/bebidas.css"/>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="../assets/img/Logo.png" class="img-fluid logo" alt="Logotipo">
+        </header>
+        <h1>BEBIDAS</h1>
+        <br><br>
+        <main class="container">
+            <div class="beverage-list">
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Refrigerante Latas - R$5,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="refrilata" @input="validateNumber">
+                </div>
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Jaboti 600ml - R$4,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="jaboti600" @input="validateNumber">
+                </div>
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Coca Cola 600ml - R$7,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="coca600" @input="validateNumber">
+                </div>
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Antarctica 1L - R$6,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="antart1" @input="validateNumber">
+                </div>
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Coca Cola 1L - R$9,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="coca1" @input="validateNumber">
+                </div>
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Coca Cola 2L - R$13,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="coca2" @input="validateNumber">
+                </div>
+                <div class="beverage-item">
+                    <p class="lead center-text" id="cde">Jaboti 2L - R$7,00</p>
+                    <input type="number" class="form-control mb-3" placeholder="0" v-model.number="jaboti2" @input="validateNumber">
+                </div>
+            </div>
+            <div class="center-button">
+                <button class="btn btn-outline-warning" @click="anotarPedido">Anotar Pedido</button>
+            </div>
+        </main>
+        <br><br><br><br><br>
+        <footer class="text-center footer">
+            <p class="lead center-text fs-auto">
+                <form action="Tela Marmitas.html">
+                    <input type="image" src="../assets/img/BTN Marmitas.png" alt="Submit" class="img-fluid img">
+                </form>
+                <form action="tela-cardapio.html">
+                    <input type="image" src="../assets/img/BTN Cardápio.png" alt="Submit" class="img-fluid img">
+                </form>
+                <form>
+                    <img src="../assets/img/BTN Bebidas.png" alt="Submit" class="img-fluid img">
+                </form>
+                <div class="pedido-button">
+                    <form action="">
+                    <input type="image" src="../assets/img/BTN Pedido.png" alt="Pedido" class="img-fluid img">
+                    </form>
+                    <span class="pedido-counter">
+                        <span class="counter" v-if="pedidoCount > 0">{{ pedidoCount }}</span>
+                    </span>
+                </div>
+                <form action="Tela de Cadastro.html">
+                    <input type="image" src="../assets/img/BTN Cliente.png" alt="Submit" class="img-fluid img">
+                </form>
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                refrilata: 0,
+                jaboti600: 0,
+                coca600: 0,
+                antart1: 0,
+                coca1: 0,
+                coca2: 0,
+                jaboti2: 0,
+                pedidoCount: 0, // Inicializando o contador de pedidos
+                refrilataTemp: 0,
+                jaboti600Temp: 0,
+                coca600Temp: 0,
+                antart1Temp: 0,
+                coca1Temp: 0,
+                coca2Temp: 0,
+                jaboti2Temp: 0,
+            },
+            methods: {
+                anotarPedido() {
+                    // Atualiza o contador de pedidos apenas quando o botão é clicado
+                    this.pedidoCount = this.refrilataTemp + this.jaboti600Temp + this.coca600Temp + this.antart1Temp + this.coca1Temp + this.coca2Temp + this.jaboti2Temp;
+                    // Zera os temporários
+                    this.refrilataTemp = 0;
+                    this.jaboti600Temp = 0;
+                    this.coca600Temp = 0;
+                    this.antart1Temp = 0;
+                    this.coca1Temp = 0;
+                    this.coca2Temp = 0;
+                    this.jaboti2Temp = 0;
+                    // Limpar os campos de entrada
+                    this.refrilata = 0;
+                    this.jaboti600 = 0;
+                    this.coca600 = 0;
+                    this.antart1 = 0;
+                    this.coca1 = 0;
+                    this.coca2 = 0;
+                    this.jaboti2 = 0;
+                },
+                validateNumber() {
+                    // Impedir valores negativos
+                    this.refrilata = Math.max(0, this.refrilata);
+                    this.jaboti600 = Math.max(0, this.jaboti600);
+                    this.coca600 = Math.max(0, this.coca600);
+                    this.antart1 = Math.max(0, this.antart1);
+                    this.coca1 = Math.max(0, this.coca1);
+                    this.coca2 = Math.max(0, this.coca2);
+                    this.jaboti2 = Math.max(0, this.jaboti2);
+
+                    // Atualizar valores temporários
+                    this.refrilataTemp = this.refrilata;
+                    this.jaboti600Temp = this.jaboti600;
+                    this.coca600Temp = this.coca600;
+                    this.antart1Temp = this.antart1;
+                    this.coca1Temp = this.coca1;
+                    this.coca2Temp = this.coca2;
+                    this.jaboti2Temp = this.jaboti2;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio de Marmitas Pequenas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/marmitas.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="container">
+                <img src="../assets/img/Logo.png" class="img-fluid logo" alt="Logotipo">
+            </div>
+        </header>
+        <h1 class="text-center">Marmita Pequena</h1>
+        <main class="content">
+            <div class="text-center">
+                <div class="col-md-20">
+                    <h2 class="text-center">Inclusos na Marmita</h2>
+                    <h3 class="text-center">Arroz | Feijão | Macarrão | Salada</h3>
+                    <br>
+                    <p class="lead center-text">
+                        <a>Escolha o que irá na marmita:</a>
+                    </p>
+                    <p class="lead center-text">
+                        <a>Misturas</a>
+                    </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carne1" v-model="selectedMistura" value="Bife Acebolado">
+                        <label class="form-check-label" for="carne1"> Bife Acebolado </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carne2" v-model="selectedMistura" value="Bisteca SuÃ­na">
+                        <label class="form-check-label" for="carne2"> Bisteca SuÃ­na </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carne3" v-model="selectedMistura" value="Calabresa Acebolada">
+                        <label class="form-check-label" for="carne3"> Calabresa Acebolada </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carne4" v-model="selectedMistura" value="File de frango">
+                        <label class="form-check-label" for="carne4"> File de frango </label>
+                    </div>
+                    <p class="lead center-text">
+                        <a>Acompanhamentos</a>
+                    </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="acompanhamento1" v-model="selectedAcompanhamento" value="Batata frita">
+                        <label class="form-check-label" for="acompanhamento1"> Batata frita </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="acompanhamento2" v-model="selectedAcompanhamento" value="Mandioca frita">
+                        <label class="form-check-label" for="acompanhamento2"> Mandioca frita </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="acompanhamento3" v-model="selectedAcompanhamento" value="Polenta frita">
+                        <label class="form-check-label" for="acompanhamento3"> Polenta frita </label>
+                    </div>
+                    <br><br>
+                    <h4 class="text-center">Observações</h4>
+                    <div class="mb-3">
+                        <textarea class="form-control" v-model="observacao" rows="3"></textarea>
+                    </div>
+                    <div class="center-button">
+                        <button class="btn btn-outline-warning" @click="salvar">Anotar Pedido</button>
+                    </div>
+                    <br>
+                </div>
+                <br><br><br><br>
+            </div>
+        </main>
+        <footer class="text-center footer">
+            <p class="lead center-text fs-auto">
+                <form action="Tela Marmitas.html">
+                    <input type="image" src="../assets/img/BTN Marmitas.png" alt="Submit" class="img-fluid img">
+                </form>
+                <form action="tela-cardapio.html">
+                    <input type="image" src="../assets/img/BTN Cardápio.png" alt="Submit" class="img-fluid img">
+                </form>
+                <form action="Tela Bebidas.html">
+                    <input type="image" src="../assets/img/BTN Bebidas.png" alt="Submit" class="img-fluid img">
+                </form>
+                <div class="pedido-button">
+                    <form action="">
+                    <input type="image" src="../assets/img/BTN Pedido.png" alt="Pedido" class="img-fluid img">
+                    </form>
+                    <span class="pedido-counter">
+                        <span class="counter" v-if="pedidoCount > 0">{{ pedidoCount }}</span>
+                    </span>
+                </div>
+                <form action="Tela de Cadastro.html">
+                    <input type="image" src="../assets/img/BTN Cliente.png" alt="Submit" class="img-fluid img">
+                </form>
+            </p>
+        </footer>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                selectedMistura: [],
+                selectedAcompanhamento: [],
+                observacao: '',
+                mostrarMensagem: false,
+                pedidoCount: 0
+            },
+            methods: {
+                salvar: function() {
+                    if (this.selectedMistura.length !== 1 || this.selectedAcompanhamento.length !== 1) {
+                        alert('Você deve selecionar 1 Mistura e 1 Acompanhamento.');
+                        return;
+                    }
+
+                    const dados = {
+                        mistura: this.selectedMistura[0],
+                        acompanhamento: this.selectedAcompanhamento[0],
+                        observacao: this.observacao
+                    };
+
+                    console.log('Dados para salvar:', dados);
+                    this.selectedMistura = [];
+                    this.selectedAcompanhamento = [];
+                    this.observacao = '';
+
+                    this.mostrarMensagem = true;
+                    this.pedidoCount++;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
